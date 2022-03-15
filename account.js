@@ -23,9 +23,7 @@ function PromptReasonForHold(executionContext) {
 	if (currentValue) {
 		formContext.ui.setFormNotification("You are about to apply legal hold on the property!", "WARNING", 1);
 
-		setTimeout(function () {
 			 reasonForHoldText = prompt("Please enter the reason for Hold");
-		}, 300);
 
 		if (reasonForHoldText === null || reasonForHoldText === "") {
 			formContext.getAttribute("tfl_legalholdproperty").setValue(false);
